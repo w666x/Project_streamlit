@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通用函数手册 &mdash; streamlit_demo 1.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/color_role.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=def9ab29"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link href="_static/custom.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            streamlit_demo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">内容概览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">项目内容说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#id9">项目其他内容</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">详细文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="API.html"> 方法索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">函数方法</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">模块索引</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">streamlit_demo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">通用函数手册</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/function_helps.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <blockquote>
+<div></div></blockquote>
+<section id="function-helps">
+<span id="id1"></span><h1>通用函数手册<a class="headerlink" href="#function-helps" title="Permalink to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>本节主要介绍常用的函数</p></li>
+</ul>
+</div>
+<section id="id2">
+<h2>函数说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="torch">
+<h3>torch<a class="headerlink" href="#torch" title="Permalink to this heading"></a></h3>
+<section id="torch-gather">
+<span id="id3"></span><h4>torch.gather<a class="headerlink" href="#torch-gather" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>功能说明</strong></dt><dd><ul>
+<li><p>从原input tensor中获取指定dim和指定index的数据 <code class="docutils literal notranslate"><span class="pre">gather(input,</span> <span class="pre">dim,</span> <span class="pre">index)</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># 目标tensor如下，维度为`torch.Size([3, 5])`</span>
+<span class="linenos"> 2</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">torch</span>
+<span class="linenos"> 3</span><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span> <span class="mf">0.3992</span><span class="p">,</span>  <span class="mf">0.9006</span><span class="p">,</span>  <span class="mf">0.6797</span><span class="p">,</span>  <span class="mf">0.4850</span><span class="p">,</span>  <span class="mf">0.6004</span><span class="p">],</span>
+<span class="linenos"> 4</span>                  <span class="p">[</span> <span class="mf">0.0000</span><span class="p">,</span>  <span class="mf">0.2908</span><span class="p">,</span>  <span class="mf">0.0000</span><span class="p">,</span>  <span class="mf">0.4152</span><span class="p">,</span>  <span class="mf">0.0000</span><span class="p">],</span>
+<span class="linenos"> 5</span>                  <span class="p">[</span> <span class="mf">0.5735</span><span class="p">,</span>  <span class="mf">0.0000</span><span class="p">,</span>  <span class="mf">0.9044</span><span class="p">,</span>  <span class="mf">0.0000</span><span class="p">,</span>  <span class="mf">0.1732</span><span class="p">]])</span>
+<span class="linenos"> 6</span><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="linenos"> 7</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># 给定索引如下</span>
+<span class="linenos">10</span><span class="o">&gt;&gt;&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="linenos">11</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="linenos">12</span>        <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>给定torch.gather维度为0时，结果为，<strong>即维度为0时，给定的值都是在给维度0赋值</strong></dt><dd><ul class="simple">
+<li><p><span class="incremental">[0, 1, 2, 0, 0]</span> 对应的从目标t中取值的索引为， <span class="incremental">[0, 0], [1, 1], [2, 2], [0, 3], [0, 4]</span> , 作为结果表第1行的值哦</p></li>
+<li><p><span class="incremental">[2, 0, 0, 1, 2]</span> 对应的从目标t中取值的索引为， <span class="incremental">[2, 0], [0, 1], [0, 2], [1, 3], [2, 4]</span> ，作为结果表第3行的值哦</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]))</span>
+<span class="linenos">2</span><span class="go">tensor([[0.3992, 0.2908, 0.9044, 0.4850, 0.6004],</span>
+<span class="linenos">3</span><span class="go">        [0.3992, 0.2908, 0.9044, 0.4850, 0.6004],</span>
+<span class="linenos">4</span><span class="go">        [0.5735, 0.9006, 0.6797, 0.4152, 0.1732],</span>
+<span class="linenos">5</span><span class="go">        [0.5735, 0.9006, 0.6797, 0.4152, 0.1732]])</span>
+<span class="linenos">6</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="linenos">7</span><span class="go">tensor(0.3992) tensor(0.2908) tensor(0.9044) tensor(0.4850) tensor(0.6004)</span>
+<span class="linenos">8</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="linenos">9</span><span class="go">tensor(0.5735) tensor(0.9006) tensor(0.6797) tensor(0.4152) tensor(0.1732)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><dl class="simple">
+<dt>给定torch.gather维度为1时，结果为，<strong>即维度为1时，给定的值都是在给维度1赋值</strong></dt><dd><ul class="simple">
+<li><p><span class="incremental">[0, 1, 2, 0, 0]</span> 对应的从目标t中取值的索引为， <span class="incremental">[0, 0], [0, 1], [0, 2], [0, 0], [0, 0]</span> , 作为结果表第1行的值哦</p></li>
+<li><p><span class="incremental">[2, 0, 0, 1, 2]</span> 对应的从目标t中取值的索引为， <span class="incremental">[1, 2], [1, 0], [1, 0], [1, 1], [1, 2]</span> , 作为结果表第2行的值哦</p></li>
+<li><p><span class="incremental">[2, 0, 0, 1, 2]</span> 对应的从目标t中取值的索引为， <span class="incremental">[2, 2], [2, 0], [2, 0], [2, 1], [2, 2]</span> , 作为结果表第3行的值哦</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]))</span>
+<span class="linenos">2</span><span class="go">tensor([[0.3992, 0.9006, 0.6797, 0.3992, 0.3992],</span>
+<span class="linenos">3</span><span class="go">        [0.0000, 0.0000, 0.0000, 0.2908, 0.0000],</span>
+<span class="linenos">4</span><span class="go">        [0.9044, 0.5735, 0.5735, 0.0000, 0.9044]])</span>
+<span class="linenos">5</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="linenos">6</span><span class="go">tensor(0.3992) tensor(0.9006) tensor(0.6797) tensor(0.3992) tensor(0.3992)</span>
+<span class="linenos">7</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="linenos">8</span><span class="go">tensor(0.9044) tensor(0.5735) tensor(0.5735) tensor(0.) tensor(0.9044)</span>
+</pre></div>
+</div>
+</section>
+<section id="torch-scatter">
+<h4>torch.scatter<a class="headerlink" href="#torch-scatter" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>功能说明</strong></dt><dd><ul>
+<li><p>通过给定索引，<span class="incremental">scatter(input, dim, index, src)</span> 从src中获取字段，来覆盖input中的值</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># 目标tensor如下，维度为`torch.Size([4, 6])`</span>
+<span class="linenos">2</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">torch</span>
+<span class="linenos">3</span><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="linenos">5</span>        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="linenos">6</span>        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="linenos">7</span>        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="linenos">8</span><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="linenos">9</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># 给定索引如下</span>
+<span class="linenos">2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">index</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="linenos">3</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="linenos">4</span>        <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="linenos">5</span><span class="c1"># src如下，维度为`torch.Size([2, 5])`</span>
+<span class="linenos">6</span><span class="o">&gt;&gt;&gt;</span> <span class="n">src</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="linenos">7</span><span class="n">tensor</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">],</span>
+<span class="linenos">8</span>        <span class="p">[</span> <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>给定torch.scatter维度为0时，结果为，<strong>即维度为0时，给定的值都是在给维度0赋值</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>src的j列按照index的j列中的值散射到input的j列中；</dt><dd><ul>
+<li><p><strong>比如第3列src的值为[3,8], index值为[2,0],则3被赋值给input的第3列index=2位置了； 8被赋值给input第3列的index=0的位置了</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><span class="incremental">[0, 2]</span> 对应的是将src中第1列的2个值[1, 6]赋值给目标t下述位置处， <span class="incremental">[0, 0], [2, 0]</span></p></li>
+<li><p><span class="incremental">[1, 0]</span> 对应的是将src中第2列的2个值[2, 7]赋值给目标t下述位置处， <span class="incremental">[1, 1], [0, 1]</span></p></li>
+<li><p><span class="incremental">[2, 0]</span> 对应的是将src中第3列的2个值[3, 8]赋值给目标t下述位置处， <span class="incremental">[2, 2], [0, 2]</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">src</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span>
+<span class="linenos"> 3</span><span class="go">tensor([[ 1,  7,  8,  4,  5,  0],</span>
+<span class="linenos"> 4</span><span class="go">        [ 0,  2,  0,  9,  0,  0],</span>
+<span class="linenos"> 5</span><span class="go">        [ 6,  0,  3,  0, 10,  0],</span>
+<span class="linenos"> 6</span><span class="go">        [ 0,  0,  0,  0,  0,  0]])</span>
+<span class="linenos"> 7</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="linenos"> 8</span><span class="go">tensor(1) tensor(2) tensor(3) tensor(4) tensor(5)</span>
+<span class="linenos"> 9</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="linenos">10</span><span class="go">tensor(6) tensor(7) tensor(8) tensor(9) tensor(10)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><dl class="simple">
+<dt>给定torch.scatter维度为1时，结果为，<strong>即维度为1时，给定的值都是在给维度1赋值</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>src的i行按照index的i行中的值散射到input的i行中</dt><dd><ul>
+<li><p><strong>比如第1行src的值为[1,2,3,4,5], index值为[0,1,2,0,0],则3被赋值给input的第1行index=2位置了；5被赋值给input第1行的index=0的位置了，且覆盖了前面被赋值的4</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><span class="incremental">[0, 1, 2, 0, 0]</span> 对应的是将src中第1行的5个值赋值给目标t下述位置处， <span class="incremental">[0, 0], [0, 1], [0, 2], [0, 0], [0, 0]</span></p></li>
+<li><p><span class="incremental">[2, 0, 0, 1, 2]</span> 对应的是将src中第2行的5个值赋值给目标t下述位置处， <span class="incremental">[1, 2], [1, 0], [1, 0], [1, 1], [1, 2]</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">src</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span>
+<span class="linenos"> 3</span><span class="go">tensor([[ 5,  2,  3,  0,  0,  0],</span>
+<span class="linenos"> 4</span><span class="go">        [ 8,  9, 10,  0,  0,  0],</span>
+<span class="linenos"> 5</span><span class="go">        [ 0,  0,  0,  0,  0,  0],</span>
+<span class="linenos"> 6</span><span class="go">        [ 0,  0,  0,  0,  0,  0]])</span>
+<span class="linenos"> 7</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="linenos"> 8</span><span class="go">tensor(5) tensor(2) tensor(3) tensor(5) tensor(5)</span>
+<span class="linenos"> 9</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="linenos">10</span><span class="go">tensor(10) tensor(8) tensor(8) tensor(9) tensor(10)</span>
+</pre></div>
+</div>
+</section>
+<section id="torch-unsqueeze">
+<h4>torch.unsqueeze<a class="headerlink" href="#torch-unsqueeze" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><dl class="simple">
+<dt>返回一个新的张量，对输入的既定位置插入维度 1， <code class="docutils literal notranslate"><span class="pre">torch.unsqueeze(input,</span> <span class="pre">dim,</span> <span class="pre">out=None)</span></code></dt><dd><ul>
+<li><p>注意：返回张量与输入张量共享内存，所以改变其中一个的内容会改变另一个。</p></li>
+<li><p>如果dim为负，则将会被转化dim+input.dim()+1</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="gp">In [2]: </span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="gp">In [3]: </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">tensor([1., 2., 3., 4.])</span>
+
+<span class="gp">In [4]: </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([4])</span>
+
+<span class="gp">In [5]: </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">dim</span><span class="p">())</span>
+<span class="go">1</span>
+
+<span class="gp">In [6]: </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
+<span class="go">[1. 2. 3. 4.]</span>
+
+<span class="go"># 在维度0处，新增一个维度</span>
+<span class="gp">In [7]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="go">tensor([[1., 2., 3., 4.]])</span>
+
+<span class="gp">In [8]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([1, 4])</span>
+
+<span class="gp">In [9]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">dim</span><span class="p">())</span>
+<span class="go">2</span>
+
+<span class="gp">In [10]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
+<span class="go">[[1. 2. 3. 4.]]</span>
+
+<span class="go"># 在维度1处，新增一个维度</span>
+<span class="gp">In [11]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">tensor([[1.],</span>
+<span class="go">        [2.],</span>
+<span class="go">        [3.],</span>
+<span class="go">        [4.]])</span>
+
+<span class="gp">In [12]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([4, 1])</span>
+
+<span class="gp">In [13]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">dim</span><span class="p">())</span>
+<span class="go">2</span>
+
+<span class="go"># 在维度-1 + x.shape[0] + 1处，即维度1处新增一个维度</span>
+<span class="gp">In [14]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="go">tensor([[1.],</span>
+<span class="go">        [2.],</span>
+<span class="go">        [3.],</span>
+<span class="go">        [4.]])</span>
+
+<span class="gp">In [15]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([4, 1])</span>
+
+<span class="gp">In [16]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">dim</span><span class="p">())</span>
+<span class="go">2</span>
+
+<span class="go"># 在维度-2 + x.shape[0] + 1处，即维度0处新增一个维度</span>
+<span class="gp">In [17]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">tensor([[1., 2., 3., 4.]])</span>
+
+<span class="gp">In [18]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([1, 4])</span>
+
+<span class="gp">In [19]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">dim</span><span class="p">())</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+</section>
+<section id="torch-squeeze">
+<h4>torch.squeeze<a class="headerlink" href="#torch-squeeze" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">torch.squeeze(input,</span> <span class="pre">dim=None,</span> <span class="pre">out=None)</span></code> 将输入张量形状中的1 去除并返回。</dt><dd><ul>
+<li><p>如果输入是形如(A×1×B×1×C×1×D)，那么输出形状就为： (A×B×C×D)</p></li>
+<li><dl class="simple">
+<dt>当给定dim时，那么挤压操作只在给定维度上。</dt><dd><ul>
+<li><p>例如，输入形状为: (A×1×B), <strong>squeeze(input, 0) 将会保持张量不变，只有用 squeeze(input, 1)，形状会变成 (A×B)。</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [20]: </span><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="gp">In [21]: </span><span class="n">m</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="gp">In [22]: </span><span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([2, 1, 2, 1, 2])</span>
+
+<span class="gp">In [23]: </span><span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="gp">In [24]: </span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([2, 2, 2])</span>
+
+<span class="gp">In [25]: </span><span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="gp">In [26]: </span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([2, 1, 2, 1, 2])</span>
+
+<span class="gp">In [27]: </span><span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="gp">In [28]: </span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([2, 2, 1, 2])</span>
+
+<span class="gp">In [29]: </span><span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="gp">In [30]: </span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([2, 1, 2, 1, 2])</span>
+
+<span class="gp">In [31]: </span><span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="gp">In [32]: </span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+<span class="go">torch.Size([2, 1, 2, 2])</span>
+
+<span class="gp">In [33]: </span><span class="n">p</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="gp">In [34]: </span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="go">tensor([[[0.]],</span>
+
+<span class="go">        [[0.]]])</span>
+</pre></div>
+</div>
+</section>
+<section id="torch-view">
+<h4>torch.view<a class="headerlink" href="#torch-view" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>即指定维度后，剩下的维度自动推断</p></li>
+</ul>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [35]: </span><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="gp">In [36]: </span><span class="n">tt1</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">0.3623</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6115</span><span class="p">,</span>  <span class="mf">0.7283</span><span class="p">,</span>  <span class="mf">0.4699</span><span class="p">,</span>  <span class="mf">2.3261</span><span class="p">,</span>  <span class="mf">0.1599</span><span class="p">])</span>
+
+<span class="gp">In [37]: </span><span class="nb">print</span><span class="p">(</span><span class="n">tt1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">torch.Size([6])</span>
+
+<span class="gp">In [38]: </span><span class="n">result</span><span class="o">=</span><span class="n">tt1</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="gp">In [39]: </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">torch.Size([3, 2])</span>
+
+<span class="gp">In [40]: </span><span class="n">tt2</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.3623</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6115</span><span class="p">],</span>
+<span class="gp">   ....: </span>            <span class="p">[</span> <span class="mf">0.7283</span><span class="p">,</span>  <span class="mf">0.4699</span><span class="p">],</span>
+<span class="gp">   ....: </span>            <span class="p">[</span> <span class="mf">2.3261</span><span class="p">,</span>  <span class="mf">0.1599</span><span class="p">]])</span>
+<span class="gp">   ....: </span>
+
+<span class="gp">In [41]: </span><span class="nb">print</span><span class="p">(</span><span class="n">tt2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">torch.Size([3, 2])</span>
+
+<span class="gp">In [42]: </span><span class="n">result</span><span class="o">=</span><span class="n">tt2</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="gp">In [43]: </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">torch.Size([2, 3])</span>
+</pre></div>
+</div>
+</section>
+<section id="torch-clamp">
+<h4>torch.clamp<a class="headerlink" href="#torch-clamp" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><dl class="simple">
+<dt>将input 的值控制在min 和 max 之间</dt><dd><ul>
+<li><p>torch.clamp(input, min, max, out=None) → Tensor</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [44]: </span><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="gp">In [45]: </span><span class="n">tt1</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">0.3623</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6115</span><span class="p">,</span>  <span class="mf">0.7283</span><span class="p">,</span>  <span class="mf">0.4699</span><span class="p">,</span>  <span class="mf">2.3261</span><span class="p">,</span>  <span class="mf">0.1599</span><span class="p">])</span>
+
+<span class="gp">In [46]: </span><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="n">tt1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">tensor([0.0000, 0.0000, 0.7283, 0.4699, 1.0000, 0.1599])</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, nlper.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

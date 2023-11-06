@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>项目内容说明 &mdash; streamlit_demo 1.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/color_role.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=def9ab29"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API函数说明" href="API.html" />
+    <link rel="prev" title="Welcome to streamlit’s documentation!" href="index.html" />
+    <link href="_static/custom.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            streamlit_demo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">快速入门</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">内容概览</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">项目内容说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">方法概览</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">方法简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demo">demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">功能清单</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">详细方法介绍</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#st-write">st.write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magic">magic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">文本内容</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">优化提高</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id9">项目其他内容</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id10">目录树</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">环境版本说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">帮助文档</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">部署环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">生成帮助文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">查看帮助文档</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">详细文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="API.html"> 方法索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">函数方法</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">模块索引</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">streamlit_demo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">项目内容说明</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/readme.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>“””streamlit，可以非常快的搞出1个网页引用demo出来啦”””</p>
+<section id="id1">
+<h1>项目内容说明<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p>内容简介</p>
+<ul>
+<li><p>streamlit方法介绍，包括函数、组件、常用命令等</p></li>
+<li><p>优化提高方式，streamlit速度较慢，总得提高下吧</p></li>
+</ul>
+</li>
+</ul>
+<section id="id2">
+<h2>方法概览<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3>方法简介<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Streamlit基于python脚本文件来实现网页应用，本质上，<strong>是在整个python脚本上不断重复从头运行到结尾的过程</strong></p></li>
+<li><p><strong>两个if…else分支中的部分是完全隔离</strong>，且通过按钮等方式运行一个又运行另一个时，其中一个的作用将完全不会对另一个分支产生任何影响，实际上Streamlit是从if…else语句的开头重新运行了这部分代码直到下一个暂停点</p>
+<ul>
+<li><p>比如，点击第一个按钮使得if…else进入第一个分支修改一个全局变量tmp的值（初始为 0），使其自增 1，随后点击另一个按钮进入另一个分支，使tmp再次自增 1，最终tmp的值会是 1，因为两个分支最终只会运行一个，即第二个分支，第一个分支的操作会被Streamlit回滚而取消</p></li>
+<li><p>另外，所有可交互的组件如按钮和勾选框，对其进行一次交互只是修改了一次它的状态，与其绑定的on_click函数仅在其被激活的状态下运行一次，其没有激活时(按钮点击一次后，点击其他交互组件即会自动退回未激活状态)与其绑定的on_click函数就会回撤而变为未运行过的状态</p></li>
+</ul>
+</li>
+<li><p>因此，基于Streamlit的这种从前到后的脚本运行的特性，很多应用程序的编写逻辑可能与其他框架不同，<strong>当需要对某个数据反复修改时，需要考虑使用外部存储的方法</strong></p></li>
+<li><p>内容参考自 <a class="reference external" href="https://blog.csdn.net/qq_31034569/article/details/122152973">Streamlit中文文档（笔记）</a></p></li>
+</ul>
+</section>
+<section id="demo">
+<h3>demo<a class="headerlink" href="#demo" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>任务说明</p>
+<ul>
+<li><p>指定端口为8882</p></li>
+<li><p>获取使用统计信息</p></li>
+<li><p>前端查询，不等待，直接刷新</p></li>
+<li><p>主题设置为黑色</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>streamlit<span class="w"> </span>run<span class="w"> </span>--server.port<span class="w"> </span><span class="m">8882</span><span class="w"> </span>--browser.gatherUsageStats<span class="w"> </span>True<span class="w"> </span>--runner.fastReruns<span class="w"> </span>True<span class="w"> </span>--theme.base<span class="w"> </span>dark<span class="w"> </span>--theme.font<span class="w"> </span><span class="s1">&#39;sans serif&#39;</span><span class="w"> </span>streamlit_function.py
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>功能清单<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>功能方法汇总</p>
+<ul>
+<li><p>比较常用的命令哈，也就是 <code class="docutils literal notranslate"><span class="pre">port、fastReruns、theme、logger</span></code>这些命令啦</p></li>
+</ul>
+</li>
+</ul>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th style="text-align: left;">是否常用</th>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">命令分类</th>
+<th style="text-align: left;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit docs</code></td>
+<td style="text-align: left;">docs</td>
+<td style="text-align: left;">查看帮助文档</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>streamlit cache clear</code></td>
+<td style="text-align: left;">cache</td>
+<td style="text-align: left;">清空缓存</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>streamlit config show</code></td>
+<td style="text-align: left;">config</td>
+<td style="text-align: left;">打印配置文件</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>streamlit run streamlit_demo.py</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">运行文件啦</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --logger.level TEXT</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">设置日志等级，<br>值可以为，<code>error/warning/info/debug</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>streamlit run --runner.fastReruns BOOLEAN</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">快速返回结果，而不需要等待</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --server.address TEXT</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">设置server的地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>streamlit run --server.port INTEGER</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">设置server的端口</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --browser.serverAddress TEXT</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">用户连接APP的地址</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --browser.serverPort INTEGER</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">用户连接APP的端口</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --server.scriptHealthCheckEnabled BOOLEAN</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">脚本检查</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --browser.gatherUsageStats BOOLEAN</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">返回使用统计</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --theme.base TEXT</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">主题基础，可选择的为<code>light/dark</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>streamlit run --theme.font TEXT</code></td>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">主题字体，可选择的为<code>sans serif/serif/monospace</code></td>
+</tr>
+</tbody>
+</table><ul class="simple">
+<li><p>函数方法汇总简介</p>
+<ul>
+<li><p>打印基础信息</p></li>
+</ul>
+</li>
+</ul>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th style="text-align: left;">是否常用</th>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.dataframe(data=None, width=None, height=None)</code></td>
+<td style="text-align: left;">打印dataframe</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.table(data=None)</code></td>
+<td style="text-align: left;">打印表格</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.metric(label, value, delta=None, delta_color="normal")</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.json(body)</code></td>
+<td style="text-align: left;">打印json数据</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.caption(body)</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.code(body, language="python")</code></td>
+<td style="text-align: left;">打印脚本</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.text(body)</code></td>
+<td style="text-align: left;">打印纯文本</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.latex(body)</code></td>
+<td style="text-align: left;">打印latex输入</td>
+</tr>
+</tbody>
+</table></section>
+</section>
+<section id="id5">
+<h2>详细方法介绍<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<section id="id6">
+<h3>组件<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>包括按钮、勾选框、滑动条、 <strong>输入框和上传下载按钮以及图片音频链接应用部分</strong></p></li>
+</ul>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th style="text-align: left;">是否常用</th>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">命令分类</th>
+<th style="text-align: left;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.checkbox('test_checkbox', value=False, key=None, help="你猜呀", on_change=None, args=None, kwargs=None)</code> </td>
+<td style="text-align: left;">box </td>
+<td style="text-align: left;"> 勾选框 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.button(label="button", key=None, help="你猜呀", on_click=None)</code> </td>
+<td style="text-align: left;">button </td>
+<td style="text-align: left;"> 按钮 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.download_button(label="download_button", data='testttt', file_name='test_.md', help='你猜呀', on_click=None)</code> </td>
+<td style="text-align: left;">button </td>
+<td style="text-align: left;"> 下载按钮 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.radio(label="What's your favorite movie genre",options=('Comedy', 'Drama', 'Documentary'),index=2, help='你猜呀')</code> </td>
+<td style="text-align: left;">box      </td>
+<td style="text-align: left;"> 单选框 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.selectbox('slectbox',('Comedy', 'Drama', 'Documentary'),index=2, help='你猜呀')</code> </td>
+<td style="text-align: left;">box    </td>
+<td style="text-align: left;"> 下拉选项 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.multiselect('multiselect',('Comedy', 'Drama', 'Documentary'), default=['Drama'], help='你猜呀')</code> </td>
+<td style="text-align: left;">box </td>
+<td style="text-align: left;"> 多选 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.slider(label="slider", min_value=-10, max_value=10, value=-2, step=1, help="你猜呀", on_change=t1)</code> </td>
+<td style="text-align: left;">slider </td>
+<td style="text-align: left;"> 滑动条 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.select_slider(label='select_slider', options=[1,'test2',3], value=3, help="你猜呀")</code> </td>
+<td style="text-align: left;">slider </td>
+<td style="text-align: left;"> 选择滑动条 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.text_input(label='text_input', max_chars=30, value='test1', help='你猜呀', placeholder='请输入')</code> </td>
+<td style="text-align: left;">input </td>
+<td style="text-align: left;"> 文本框 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.number_input("number_input", min_value=-10, max_value=10, value=2, step=2, help="testing")</code> </td>
+<td style="text-align: left;">input </td>
+<td style="text-align: left;"> 数字选择框 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.text_area("text_area", value="test1",max_chars=60, help="你猜呀", placeholder="请输入")</code> </td>
+<td style="text-align: left;">input     </td>
+<td style="text-align: left;"> 文本区域 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.date_input(label="date_input", value=(dt1,dt2))</code> </td>
+<td style="text-align: left;">input </td>
+<td style="text-align: left;"> 时间选择 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.time_input("time_input", value=None, help="你猜呀")</code> </td>
+<td style="text-align: left;">input      </td>
+<td style="text-align: left;"> 时间选择 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.file_uploader(label='file_uploader', accept_multiple_files=True, help="你猜呀")</code> </td>
+<td style="text-align: left;">file_uploader   </td>
+<td style="text-align: left;"> 上传按钮 </td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"> <code>st.color_picker('color_picker', '#00f900')</code> </td>
+<td style="text-align: left;">color_picker </td>
+<td style="text-align: left;"> 拾色器 </td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"> <code>st.image(image=['https:**.jpg',"./data/testimage.jpg"])</code> </td>
+<td style="text-align: left;">image </td>
+<td style="text-align: left;"> 图片 </td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"> <code>st.audio("http://**.mp3")</code> </td>
+<td style="text-align: left;">audio </td>
+<td style="text-align: left;"> 音频 </td>
+</tr>
+</tbody>
+</table></section>
+<section id="st-write">
+<h3>st.write<a class="headerlink" href="#st-write" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>方法简介</p>
+<ul>
+<li><p>将参数写入应用。这是 Streamlit 命令的瑞士军刀：它可根据你提供的内容完成不同的任务。</p></li>
+<li><p>与其他 Streamlit 命令不同，write（） 具有一些独特的属性：</p>
+<ul>
+<li><ol class="simple">
+<li><p>您可以传入多个参数，所有这些参数都会被写入。</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>其行为取决于输入类型，如下表所示。</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p><strong>它返回 None，因此它在 App 中的“slots”不能重复使用。</strong></p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th style="text-align: left;">是否常用</th>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">write(string)</td>
+<td style="text-align: left;">打印markdown字符串</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">write(data_frame)</td>
+<td style="text-align: left;">将data_frame显示为表格</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(error)</td>
+<td style="text-align: left;">打印错误</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">write(func)</td>
+<td style="text-align: left;">打印一个函数的相关信息</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(module)</td>
+<td style="text-align: left;">打印一个module的相关信息</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(class)</td>
+<td style="text-align: left;">打印一个类的相关信息</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">write(dict)</td>
+<td style="text-align: left;">打印字典</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(mpl_fig)</td>
+<td style="text-align: left;">打印Matplotlib图片</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(altair)</td>
+<td style="text-align: left;">打印 Altair 图表</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(keras)</td>
+<td style="text-align: left;">打印keras模型</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">write(graphviz)</td>
+<td style="text-align: left;">打印Graphviz图</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(plotly_fig)</td>
+<td style="text-align: left;">打印Plotly图</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(bokeh_fig)</td>
+<td style="text-align: left;">打印bokeh图</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(sympy_expr)</td>
+<td style="text-align: left;">使用 LaTeX 打印 SymPy 表达式</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(htmlable)</td>
+<td style="text-align: left;">打印html</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">write(obj)</td>
+<td style="text-align: left;">以str(obj)形式打印结果</td>
+</tr>
+</tbody>
+</table></section>
+<section id="magic">
+<h3>magic<a class="headerlink" href="#magic" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>方法简介</p>
+<ul>
+<li><p><strong>任何时候如果Streamlit看到一个变量或常量值， 它就会自动将其使用st.write写入应用。</strong></p></li>
+<li><p>另外，魔术命令也能够忽略docstrings，也就是说它会忽略文件和函数 头部的字符串。</p></li>
+<li><p>如下例所示，内容都是会被打印的哦</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Draw a title and some text to the app:</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"># This is the document title</span>
+<span class="sd">This is some _markdown_.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]})</span>
+<span class="n">df</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">x</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>文本内容<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th style="text-align: left;">是否常用</th>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.markdown(body, unsafe_allow_html=False)</code></td>
+<td style="text-align: left;">打印makrdown内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.title(body, anchor=None)</code></td>
+<td style="text-align: left;">打印标题</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.header(body, anchor=None)</code></td>
+<td style="text-align: left;">打印标题</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.subheader(body, anchor=None)</code></td>
+<td style="text-align: left;">打印标题</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.caption(body)</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.code(body, language="python")</code></td>
+<td style="text-align: left;">打印脚本</td>
+</tr>
+<tr>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;"><code>st.text(body)</code></td>
+<td style="text-align: left;">打印纯文本</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>st.latex(body)</code></td>
+<td style="text-align: left;">打印latex输入</td>
+</tr>
+</tbody>
+</table></section>
+</section>
+<section id="id8">
+<h2>优化提高<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>streamlit速度比较慢，咋处理嘞</p>
+<ol class="simple">
+<li><p>st.empty()创建1个空的元素占位，用于后续更新时展示结果</p></li>
+<li><p>在触发器上使用&#64;st.cache装饰器来缓存结果，避免重复计算</p>
+<ul>
+<li><p>&#64;st.cache：比较早的实现方式了，当前版本已经deprecated了</p></li>
+<li><p>&#64;st.cache_data：在每次函数调用时创建一个新的数据副本；<strong>只有在第一次执行的时候才会读数，其他时间直接从缓存拿数据</strong></p></li>
+<li><p>&#64;st.cache_resource：是缓存诸如 ML 模型或数据库连接之类的全局资源（不想多次加载的对象）的推荐方法，全局共享哦</p></li>
+</ul>
+</li>
+<li><p>在异步操作中，使用with st.spinner()来显示加载状态</p></li>
+<li><p>在异步操作完成后，使用empty_elem.write()来更新结果</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1) empty</span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;not empty here&quot;</span><span class="p">)</span>    
+<span class="n">empty</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span>
+<span class="n">empty</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;still not empty&quot;</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#替换</span>
+<span class="n">empty</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#清除</span>
+<span class="n">empty</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;cache 测试啦&quot;</span><span class="p">)</span>
+<span class="c1"># 2) cache</span>
+<span class="nd">@timer</span>
+<span class="nd">@st</span><span class="o">.</span><span class="n">cache_resource</span><span class="p">(</span><span class="n">ttl</span><span class="o">=</span><span class="mi">10800</span><span class="p">)</span>  <span class="c1"># 3小时过期</span>
+<span class="k">def</span> <span class="nf">fetch_data</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;全局的哦直接，不会多次加载执行&quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">fetch_data</span><span class="p">(</span><span class="s2">&quot;../datas/predict_result_bak_20200901.csv&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">fetch_data</span><span class="p">(</span><span class="s2">&quot;../datas/predict_result_bak_20200901.csv&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">fetch_data</span><span class="p">(</span><span class="s2">&quot;../datas/predict_result_bak_20200902.csv&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>   
+<span class="c1"># 3) spinner</span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">spinner</span><span class="p">(</span><span class="s1">&#39;Wait for it...&#39;</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s1">&#39;Done!&#39;</span><span class="p">)</span>
+<span class="c1"># 4) 往empty占位位置写入数据</span>
+<span class="n">empty</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Rerun&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<!-- #region --></section>
+</section>
+<section id="id9">
+<h1>项目其他内容<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h1>
+<section id="id10">
+<h2>目录树<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>可以看到，<code class="docutils literal notranslate"><span class="pre">transformer_nmt_clear.py</span></code> 和 <code class="docutils literal notranslate"><span class="pre">transformer_nmt.py</span></code> 两个文件是几乎一致的啊</p></li>
+<li><p>本文注释都按照 <code class="docutils literal notranslate"><span class="pre">transformer_nmt.py</span></code> 的来了</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>diff<span class="w"> </span>-y<span class="w"> </span>--suppress-common-lines<span class="w"> </span>--minimal<span class="w"> </span>transformer_nmt_clear.py<span class="w"> </span>transformer_nmt.py<span class="w"> </span>&gt;<span class="w"> </span>diff.log
+diff<span class="w"> </span>-y<span class="w"> </span>--left-column<span class="w">  </span>transformer_nmt_clear.py<span class="w"> </span>transformer_nmt.py<span class="w">  </span>&gt;<span class="w"> </span>diff.log
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>项目路径</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── FAQ.md 【ks】
+├── PROJECT.md 【其他相关项目】
+├── README.md
+├── README_en.md 【ks】
+├── UPDATE.md 【ks】
+├── api.py
+├── cli_demo.py
+├── cli_demo_vision.py
+├── docs
+│   ├── build
+│   └── source
+├── examples 【示例图片-ks】
+├── improve 【提升方法说明-ks】
+│   └── README.md
+├── limitations 【局限性-ks】
+├── ptuning 【模型微调】
+│   ├── README.md
+│   ├── README_en.md
+│   ├── arguments.py
+│   ├── deepspeed.json
+│   ├── main.py
+│   ├── trainer.py
+│   ├── trainer_seq2seq.py
+│   └── web_demo.py
+├── resources 【入群交流-ks】
+│   └── WECHAT.md
+├── utils.py
+├── web_demo.py
+├── web_demo2.py
+├── web_demo_old.py
+└── web_demo_vision.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>生成项目明细目录</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">tree</span> <span class="pre">-P</span> <span class="pre">&quot;*.py|*.md|*.ini|*.conf|*.txt|*.json|*.csv&quot;</span> <span class="pre">-I</span> <span class="pre">&quot;__pycache__|data/cover&quot;</span> <span class="pre">-o</span> <span class="pre">tree_project.txt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tree</span> <span class="pre">-P</span> <span class="pre">&quot;*.py|*.md|*.ini|*.conf|*.rst|*.json|*.csv&quot;</span> <span class="pre">-I</span> <span class="pre">&quot;__pycache__|data/cover&quot;</span> <span class="pre">-L</span> <span class="pre">2</span> <span class="pre">src/</span> <span class="pre">-o</span> <span class="pre">project.txt</span></code></p></li>
+</ul>
+</li>
+<li><p>模型打包</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">zip</span> <span class="pre">-r</span> <span class="pre">../project_ie.zip</span> <span class="pre">./</span> <span class="pre">-x&#64;exclude.lst</span></code></p></li>
+</ul>
+</li>
+</ul>
+<details>
+<summary> 主要介绍本项目的各个文件及相应功能 </summary><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./chatglm/
+├──<span class="w"> </span>FAQ.md<span class="w"> </span>【ks】
+├──<span class="w"> </span>PROJECT.md<span class="w"> </span>【其他相关项目】
+├──<span class="w"> </span>README.md
+├──<span class="w"> </span>README_en.md<span class="w"> </span>【ks】
+├──<span class="w"> </span>UPDATE.md<span class="w"> </span>【ks】
+├──<span class="w"> </span>api.py
+├──<span class="w"> </span>cli_demo.py
+├──<span class="w"> </span>cli_demo_vision.py
+├──<span class="w"> </span>docs
+│<span class="w">   </span>├──<span class="w"> </span>build
+│<span class="w">   </span>└──<span class="w"> </span><span class="nb">source</span>
+├──<span class="w"> </span>examples<span class="w"> </span>【示例图片-ks】
+├──<span class="w"> </span>improve<span class="w"> </span>【提升方法说明-ks】
+│<span class="w">   </span>└──<span class="w"> </span>README.md
+├──<span class="w"> </span>limitations<span class="w"> </span>【局限性-ks】
+├──<span class="w"> </span>ptuning<span class="w"> </span>【模型微调】
+│<span class="w">   </span>├──<span class="w"> </span>README.md
+│<span class="w">   </span>├──<span class="w"> </span>README_en.md
+│<span class="w">   </span>├──<span class="w"> </span>arguments.py
+│<span class="w">   </span>├──<span class="w"> </span>deepspeed.json
+│<span class="w">   </span>├──<span class="w"> </span>main.py
+│<span class="w">   </span>├──<span class="w"> </span>trainer.py
+│<span class="w">   </span>├──<span class="w"> </span>trainer_seq2seq.py
+│<span class="w">   </span>└──<span class="w"> </span>web_demo.py
+├──<span class="w"> </span>resources<span class="w"> </span>【入群交流-ks】
+│<span class="w">   </span>└──<span class="w"> </span>WECHAT.md
+├──<span class="w"> </span>utils.py
+├──<span class="w"> </span>web_demo.py
+├──<span class="w"> </span>web_demo2.py
+├──<span class="w"> </span>web_demo_old.py
+└──<span class="w"> </span>web_demo_vision.py
+</pre></div>
+</div>
+</details>
+<!-- #endregion --><!-- #region --></section>
+<section id="id11">
+<h2>环境版本说明<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>linux系统相关依赖</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Ubuntu:<span class="w"> </span><span class="m">20</span>.04.1
+python:<span class="w"> </span><span class="m">3</span>.8.10
+cuda:<span class="w"> </span><span class="s1">&#39;11.4&#39;</span>
+docker:<span class="w"> </span><span class="m">20</span>.10.17
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Python环境依赖</p>
+<ul>
+<li><p>具体可参考requirements_py38.txt文件</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">streamlit</span><span class="o">==</span><span class="m">1</span>.27.2
+</pre></div>
+</div>
+<!-- #endregion --><!-- #region --></section>
+<section id="id12">
+<h2>帮助文档<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h2>
+<section id="id13">
+<h3>部署环境<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>主要就是docker镜像啦</p></li>
+<li><p>具体参考， <code class="docutils literal notranslate"><span class="pre">images_build/</span></code> 文件的readme文档，搭建自己的环境</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>生成帮助文档<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>生成文档</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="c1"># 切换到doc上一级目录下</span>
+sphinx-apidoc<span class="w"> </span>-o<span class="w"> </span>./docs/source<span class="w"> </span>./src/<span class="w"> </span><span class="nv">EXCLUDE_PATTERN</span><span class="o">=</span>docs<span class="w"> </span>-f
+
+<span class="c1"># 编译</span>
+<span class="nb">cd</span><span class="w"> </span>docs
+make<span class="w"> </span>clean<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>make<span class="w"> </span>html
+<span class="c1"># or 这个结果没有跳转关系直接了</span>
+<span class="nb">cd</span><span class="w"> </span>docs
+sphinx-build<span class="w"> </span>-b<span class="w"> </span>singlehtml<span class="w"> </span><span class="nb">source</span><span class="w"> </span>build
+
+<span class="c1"># 查看文档</span>
+<span class="nb">cd</span><span class="w"> </span>docs
+python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8885</span><span class="w"> </span>--cgi
+
+<span class="c1"># 查看tensorboard结果</span>
+tensorboard<span class="w"> </span>--port<span class="o">=</span><span class="m">8885</span><span class="w"> </span>--logdir<span class="o">=</span>./runs/
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h3>查看帮助文档<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>1、linux上</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># 切到docs路径下，linux下启用服务</span>
+<span class="nb">cd</span><span class="w"> </span>docs
+python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8885</span><span class="w"> </span>--cgi
+<span class="c1"># 在build→html→index.html下即可查看帮助文档了</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>2、window上</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># 下载docs文件到windows本地</span>
+<span class="c1"># 在build→html→index.html下即可查看帮助文档了</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>测试</p>
+<ul>
+<li><p>就是这个啊[test1](ptuning markdown)</p></li>
+</ul>
+</li>
+</ul>
+<p>:doc:<code class="docutils literal notranslate"><span class="pre">引用本地的其它rst文档,rst后缀要省略，如about_us</span> <span class="pre">&lt;../../ptuning/README.md&gt;</span></code></p>
+<!-- #endregion --></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to streamlit’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="API.html" class="btn btn-neutral float-right" title="API函数说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, nlper.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
